@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"dev": "tsnd src/server.ts --watch",
+		"dev": "tsnd --watch --respawn --transpile-only src/server.ts",
 		"build": "pnpx tsc",
 		"install": "pnpm install --frozen-lockfile"
 	},
@@ -19,11 +19,11 @@
 		"globals": "^15.8.0",
 		"reflect-metadata": "^0.2.2",
 		"ts-node-dev": "^2.0.0",
-		"typedi": "^0.10.0",
 		"typescript": "^5.5.4",
 		"typescript-eslint": "^7.17.0"
 	},
 	"dependencies": {
-		"express": "^4.19.2"
+		"express": "^4.19.2",
+		"typedi": "^0.10.0"
 	}
 }

@@ -1,13 +1,19 @@
 import { Service } from 'typedi';
 import { Controller, Get, Post } from '../../../lib/decorators';
-import { Request, Response } from 'express';
+import { Request, RequestHandler, Response } from 'express';
+import { MethodNotAllowed } from '../../../lib/error';
 
-@Controller('/users')
+const logMiddleware: RequestHandler = (req, res, next) => {
+	console.log('Logging request...');
+	next();
+};
+
+@Controller('/users', logMiddleware)
 @Service()
 export default class UserContoller {
 	@Get('/')
 	getUser() {
-		throw new Error('ahhaha');
+		throw new MethodNotAllowed();
 	}
 
 	@Post('/')

@@ -8,6 +8,9 @@ dependencies:
   express:
     specifier: ^4.19.2
     version: 4.19.2
+  typedi:
+    specifier: ^0.10.0
+    version: 0.10.0
 
 devDependencies:
   '@eslint/js':
@@ -31,9 +34,6 @@ devDependencies:
   ts-node-dev:
     specifier: ^2.0.0
     version: 2.0.0(@types/node@20.14.12)(typescript@5.5.4)
-  typedi:
-    specifier: ^0.10.0
-    version: 0.10.0
   typescript:
     specifier: ^5.5.4
     version: 5.5.4
@@ -1709,7 +1709,7 @@ packages:
 
   /typedi@0.10.0:
     resolution: {integrity: sha512-v3UJF8xm68BBj6AF4oQML3ikrfK2c9EmZUyLOfShpJuItAqVBHWP/KtpGinkSsIiP6EZyyb6Z3NXyW9dgS9X1w==}
-    dev: true
+    dev: false
 
   /typescript-eslint@7.17.0(eslint@9.8.0)(typescript@5.5.4):
     resolution: {integrity: sha512-spQxsQvPguduCUfyUvLItvKqK3l8KJ/kqs5Pb/URtzQ5AC53Z6us32St37rpmlt2uESG23lOFpV4UErrmy4dZQ==}
